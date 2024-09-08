@@ -1,0 +1,149 @@
+/* Specific Styles for Purchase Page */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #0a0a0a, #1a1a1a); /* Dark gradient background */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Glassmorphism Container */
+.glass-container {
+    background: rgba(0, 0, 0, 0.25); /* Darker glass-like transparency */
+    backdrop-filter: blur(15px); /* Blurred background for glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    padding: 30px 20px; /* Smaller padding for a compact design */
+    max-width: 350px; /* Reduced width */
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.8);
+    transition: transform 0.2s ease;
+    animation: slideIn 0.8s ease-in-out;
+}
+
+.glass-container:hover {
+    transform: translateY(-5px); /* Slight hover lift */
+}
+
+/* Header Section */
+.header h1 {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 36px; /* Reduced font size */
+    margin-bottom: 5px;
+}
+
+.header .five {
+    font-size: 42px; /* Slightly larger */
+    color: #00ffff; /* Cyan */
+}
+
+.version {
+    font-size: 16px; /* Smaller */
+    color: #00ffff; /* Cyan */
+}
+
+.tagline {
+    font-size: 13px; /* Compact */
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 15px;
+}
+
+/* Purchase Form */
+.purchase-form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* Reduced gap */
+}
+
+.form-group label {
+    font-size: 12px; /* Smaller labels */
+    color: #ffffff;
+}
+
+.form-group input,
+.form-group select {
+    padding: 8px; /* Smaller input fields */
+    border: 1px solid #333;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    font-size: 12px; /* Smaller font size */
+}
+
+.form-group input:focus,
+.form-group select:focus {
+    border-color: #00ffff;
+    outline: none;
+}
+
+.purchase-btn {
+    background: linear-gradient(135deg, #00ffff, #004d4d); /* Dark cyan gradient */
+    color: #ffffff;
+    padding: 10px 30px; /* Reduced padding */
+    border: none;
+    border-radius: 20px; /* Reduced border radius */
+    font-size: 14px; /* Smaller font */
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 4px 10px rgba(0, 255, 255, 0.3);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease, transform 0.3s ease;
+    text-transform: uppercase;
+    position: relative;
+    animation: buttonPulse 2s infinite; /* Pulse effect */
+}
+
+/* Processing Message */
+.processing-message {
+    margin-top: 10px;
+    color: #ffffff;
+    font-size: 12px; /* Smaller text */
+}
+
+/* Footer Section */
+.footer {
+    margin-top: 15px;
+    font-size: 10px; /* Smaller footer text */
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* Purchase Button Hover & Active */
+.purchase-btn:hover {
+    box-shadow: 0px 6px 15px rgba(0, 255, 255, 0.5);
+    transform: scale(1.03); /* Slight scaling on hover */
+}
+
+.purchase-btn:active {
+    transform: translateY(2px);
+}
+
+/* Smooth Entrance Animation */
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Pulsing Animation */
+@keyframes buttonPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.03);
+    }
+    100% {
+        transform: scale(1);
+    }
+}

@@ -1,0 +1,165 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #121212, #1e1e1e); /* Darker gradient background */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Glassmorphism Container */
+.glass-container {
+    background: rgba(0, 0, 0, 0.35); /* Slightly lighter glass-like transparency */
+    backdrop-filter: blur(25px); /* More blurred background for glass effect */
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px; /* Increased border radius */
+    padding: 50px 30px; /* More padding for a spacious feel */
+    max-width: 450px; /* Increased width */
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: containerSlideIn 1s ease-out;
+}
+
+.glass-container:hover {
+    transform: translateY(-15px); /* More pronounced hover lift */
+    box-shadow: 0px 15px 40px rgba(0, 255, 255, 0.6);
+}
+
+/* Header Section */
+.header h1 {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 44px; /* Increased font size */
+    margin-bottom: 10px;
+    animation: headerBounce 1s ease-in-out infinite;
+}
+
+.header .five {
+    font-size: 60px; /* Larger */
+    color: #00ffff; /* Cyan */
+}
+
+.version {
+    font-size: 20px; /* Slightly larger */
+    color: #00ffff; /* Cyan */
+}
+
+.tagline {
+    font-size: 18px; /* Larger */
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    animation: taglineFadeIn 1.5s ease-out;
+}
+
+/* Description Section */
+.description {
+    font-size: 16px; /* Larger font size */
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+/* Features List */
+.features {
+    list-style: none;
+    padding: 0;
+    font-size: 18px; /* Larger font size for features */
+    margin-bottom: 20px;
+    animation: featuresPopIn 0.8s ease-out;
+}
+
+.features li {
+    margin: 10px 0;
+    color: #e0e0e0; /* Light grey */
+    position: relative;
+    padding: 10px;
+    border-radius: 10px; /* Rounded corners */
+    background: rgba(0, 0, 0, 0.2); /* Slight background for better readability */
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Features Highlight */
+.features li:hover {
+    transform: translateY(-5px); /* Slight lift on hover */
+    background-color: rgba(0, 255, 255, 0.3); /* Highlight on hover */
+}
+
+/* Purchase Button */
+.purchase-btn {
+    position: relative;
+    background: #00ffff; /* Cyan background */
+    color: #000000; /* Dark text */
+    padding: 15px 40px; /* Increased padding */
+    border: 2px solid #00ffff; /* Initial border color */
+    border-radius: 30px; /* Increased border radius */
+    font-size: 18px; /* Larger font */
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Glowing shadow */
+}
+
+/* Simplified Hover Effect */
+.purchase-btn:hover {
+    transform: scale(1.05); /* Slightly grow on hover */
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8); /* Enhanced glowing shadow */
+    color: #000000; /* Dark text color on hover */
+}
+
+/* Footer Section */
+.footer {
+    margin-top: 20px;
+    font-size: 14px; /* Larger footer text */
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Animations */
+@keyframes containerSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes headerBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes taglineFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes featuresPopIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

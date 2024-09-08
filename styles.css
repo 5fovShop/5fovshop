@@ -163,3 +163,70 @@ body {
         transform: translateY(0);
     }
 }
+
+/* Pricing Container */
+.pricing-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.payment-option {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 10px;
+    border-radius: 15px;
+    width: 48%;
+    text-align: center;
+    color: #e0e0e0;
+}
+
+.payment-logo {
+    max-width: 100px;
+    margin-bottom: 10px;
+}
+
+/* Pricing Box for PayPal and Robux */
+.pricing-box {
+    background: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 15px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #e0e0e0;
+    width: 100%;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.payment-logo {
+    max-width: 150px;
+    margin-bottom: 10px;
+}
+
+/* Update Button to remove underline */
+.purchase-btn {
+    text-decoration: none; /* Remove underline */
+}
+
+/* Pricing List */
+.pricing-list {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+/* Status Box */
+.status-box {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: rgba(0, 255, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #00ff00;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+}

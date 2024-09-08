@@ -65,13 +65,11 @@ body {
     color: #e0e0e0;
 }
 
-/* Features List */
 .features {
     list-style: none;
     padding: 0;
-    font-size: 18px; /* Larger font size for features */
-    margin-bottom: 20px;
-    animation: featuresPopIn 0.8s ease-out;
+    font-size: 18px;
+    margin-bottom: 40px; /* Increased space below features */
 }
 
 .features li {
@@ -92,6 +90,7 @@ body {
 
 /* Purchase Button */
 .purchase-btn {
+    margin-top: 40px; /* Add space above the button */
     position: relative;
     background: #00ffff; /* Cyan background */
     color: #000000; /* Dark text */
@@ -105,6 +104,7 @@ body {
     text-transform: uppercase;
     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Glowing shadow */
+    text-decoration: none; /* Remove underline */
 }
 
 /* Simplified Hover Effect */
@@ -114,10 +114,46 @@ body {
     color: #000000; /* Dark text color on hover */
 }
 
+/* Pricing List */
+.pricing-list {
+    font-size: 18px;
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+/* Status Box */
+/* Status Box with Animation */
+.status-box {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    background: rgba(0, 255, 0, 0.2);
+    padding: 10px 20px;
+    border-radius: 10px;
+    color: #00ff00;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    animation: statusGlow 2s infinite;
+}
+
+@keyframes statusGlow {
+    0% {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    }
+    50% {
+        box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+    }
+    100% {
+        box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    }
+}
+
+
 /* Footer Section */
 .footer {
     margin-top: 20px;
-    font-size: 14px; /* Larger footer text */
+    font-size: 14px;
     color: rgba(255, 255, 255, 0.6);
 }
 
@@ -162,71 +198,4 @@ body {
         opacity: 1;
         transform: translateY(0);
     }
-}
-
-/* Pricing Container */
-.pricing-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 20px 0;
-}
-
-.payment-option {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 10px;
-    border-radius: 15px;
-    width: 48%;
-    text-align: center;
-    color: #e0e0e0;
-}
-
-.payment-logo {
-    max-width: 100px;
-    margin-bottom: 10px;
-}
-
-/* Pricing Box for PayPal and Robux */
-.pricing-box {
-    background: rgba(0, 0, 0, 0.2);
-    padding: 20px;
-    border-radius: 15px;
-    margin-bottom: 20px;
-    text-align: center;
-    color: #e0e0e0;
-    width: 100%;
-    max-width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.payment-logo {
-    max-width: 150px;
-    margin-bottom: 10px;
-}
-
-/* Update Button to remove underline */
-.purchase-btn {
-    text-decoration: none; /* Remove underline */
-}
-
-/* Pricing List */
-.pricing-list {
-    font-size: 18px;
-    margin-top: 20px;
-    color: #e0e0e0;
-}
-
-/* Status Box */
-.status-box {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    background: rgba(0, 255, 0, 0.2);
-    padding: 10px 20px;
-    border-radius: 10px;
-    color: #00ff00;
-    font-weight: bold;
-    text-align: center;
-    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
 }

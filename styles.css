@@ -12,6 +12,97 @@ body {
     overflow: hidden;
 }
 
+/* Loading Screen Styles */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.spinner {
+    border: 8px solid rgba(255, 255, 255, 0.3); /* Light grey background */
+    border-top: 8px solid #00ffff; /* Cyan color */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite, pulse 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.7;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Wrapper for Boxes */
+.wrapper {
+    display: flex;
+    gap: 30px; /* Space between the two boxes */
+    animation: wrapperSlideIn 1s ease-out, fadeIn 2s ease-in-out;
+}
+
+/* Gray Box */
+.gray-box {
+    background: rgba(128, 128, 128, 0.8); /* Light gray with slight transparency */
+    border-radius: 15px;
+    padding: 20px;
+    max-width: 300px; /* Adjusted width */
+    width: 100%;
+    text-align: center;
+    color: #ffffff;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    animation: grayBoxBounce 1.5s ease-in-out infinite, shadowPulse 2s ease-in-out infinite;
+}
+
+.gray-box-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+    color: #ff0000; /* Red color */
+    animation: titleSlideIn 1s ease-out, colorPulse 1.5s ease-in-out infinite;
+}
+
+.gray-box-image {
+    width: 330px; /* Increased width for better visibility */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+    animation: imagePulse 2s ease-in-out infinite;
+}
+
+.gray-box-text {
+    font-size: 14px;
+    color: #e0e0e0;
+}
+
 /* Glassmorphism Container */
 .glass-container {
     background: rgba(0, 0, 0, 0.35); /* Slightly lighter glass-like transparency */
@@ -24,7 +115,7 @@ body {
     text-align: center;
     box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
-    animation: containerSlideIn 1s ease-out;
+    animation: containerSlideIn 1s ease-out, glow 2s ease-in-out infinite;
 }
 
 .glass-container:hover {
@@ -38,7 +129,7 @@ body {
     color: #ffffff;
     font-size: 44px; /* Increased font size */
     margin-bottom: 10px;
-    animation: headerBounce 1s ease-in-out infinite;
+    animation: headerBounce 1s ease-in-out infinite, textGlow 2s ease-in-out infinite;
 }
 
 .header .five {
@@ -65,6 +156,7 @@ body {
     color: #e0e0e0;
 }
 
+/* Features List */
 .features {
     list-style: none;
     padding: 0;
@@ -79,13 +171,15 @@ body {
     padding: 10px;
     border-radius: 10px; /* Rounded corners */
     background: rgba(0, 0, 0, 0.2); /* Slight background for better readability */
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+    animation: listItemSlideIn 1s ease-out;
 }
 
 /* Features Highlight */
 .features li:hover {
     transform: translateY(-5px); /* Slight lift on hover */
     background-color: rgba(0, 255, 255, 0.3); /* Highlight on hover */
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.5); /* Highlight shadow */
 }
 
 /* Purchase Button */
@@ -105,6 +199,7 @@ body {
     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
     box-shadow: 0 0 15px rgba(0, 255, 255, 0.6); /* Glowing shadow */
     text-decoration: none; /* Remove underline */
+    animation: pulseButton 1.5s ease-in-out infinite;
 }
 
 /* Simplified Hover Effect */
@@ -122,7 +217,6 @@ body {
 }
 
 /* Status Box */
-/* Status Box with Animation */
 .status-box {
     position: absolute;
     top: 30px;
@@ -134,21 +228,23 @@ body {
     font-weight: bold;
     text-align: center;
     box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
-    animation: statusGlow 2s infinite;
+    animation: statusGlow 2s infinite, statusPulse 2s ease-in-out infinite;
 }
 
-@keyframes statusGlow {
+@keyframes statusPulse {
     0% {
-        box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+        transform: scale(1);
+        opacity: 1;
     }
     50% {
-        box-shadow: 0 0 25px rgba(0, 255, 0, 1);
+        transform: scale(1.1);
+        opacity: 0.7;
     }
     100% {
-        box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+        transform: scale(1);
+        opacity: 1;
     }
 }
-
 
 /* Footer Section */
 .footer {
@@ -189,7 +285,71 @@ body {
     }
 }
 
-@keyframes featuresPopIn {
+@keyframes grayBoxBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes titleSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes wrapperSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes glow {
+    0% {
+        box-shadow: 0px 10px 30px rgba(0, 255, 255, 0.6);
+    }
+    50% {
+        box-shadow: 0px 15px 50px rgba(0, 255, 255, 0.8);
+    }
+    100% {
+        box-shadow: 0px 10px 30px rgba(0, 255, 255, 0.6);
+    }
+}
+
+@keyframes colorPulse {
+    0%, 100% {
+        color: #ff0000;
+    }
+    50% {
+        color: #ff6666;
+    }
+}
+
+@keyframes imagePulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes listItemSlideIn {
     0% {
         opacity: 0;
         transform: translateY(20px);
@@ -197,5 +357,48 @@ body {
     100% {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+@keyframes pulseButton {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+
+/* Apply Animated Gradient Background */
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #121212, #1e1e1e); /* Darker gradient background */
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: backgroundGradient 10s linear infinite;
+}
+
+/* Background Animation */
+@keyframes backgroundGradient {
+    0% {
+        background: linear-gradient(135deg, #121212, #1e1e1e);
+    }
+    50% {
+        background: linear-gradient(135deg, #121212, #1a1a1a);
+    }
+    100% {
+        background: linear-gradient(135deg, #121212, #1e1e1e);
     }
 }

@@ -1,0 +1,314 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(135deg, #121212, #1e1e1e);
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Main Wrapper */
+.main-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Glassmorphism Container */
+.glass-container {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(25px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 25px;
+    padding: 50px 30px;
+    max-width: 450px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: containerSlideIn 1s ease-out;
+}
+
+/* Glassmorphism Container Hover Effect */
+.glass-container:hover {
+    transform: translateY(-15px);
+    box-shadow: 0px 15px 40px rgba(0, 255, 255, 0.6);
+}
+        
+/* Header Section */
+.header h1 {
+    font-weight: 700;
+    color: #ffffff;
+    font-size: 44px;
+    margin-bottom: 10px;
+    animation: headerBounce 1s ease-in-out infinite;
+}
+
+.header .five {
+    font-size: 60px;
+    color: #00ffff;
+}
+
+.version {
+    font-size: 20px;
+    color: #00ffff;
+}
+
+.tagline {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    animation: taglineFadeIn 1.5s ease-out;
+}
+
+/* Description Section */
+.description {
+    font-size: 16px;
+    margin-bottom: 20px;
+    color: #e0e0e0;
+}
+
+/* Features List */
+.features {
+    list-style: none;
+    padding: 0;
+    font-size: 18px;
+    margin-bottom: 20px;
+    animation: featuresPopIn 0.8s ease-out;
+}
+
+.features li {
+    margin: 10px 0;
+    color: #e0e0e0;
+    position: relative;
+    padding: 10px;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+/* Features Highlight */
+.features li:hover {
+    transform: translateY(-5px);
+    background-color: rgba(0, 255, 255, 0.3);
+}
+
+/* Purchase Button */
+.purchase-btn {
+    position: relative;
+    background: #00ffff;
+    color: #000000;
+    padding: 15px 40px;
+    border: 2px solid #00ffff;
+    border-radius: 30px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    overflow: hidden;
+    text-transform: uppercase;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+}
+
+/* Simplified Hover Effect */
+.purchase-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    color: #000000;
+}
+
+/* Footer Section */
+.footer {
+    margin-top: 20px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+/* Animations */
+@keyframes containerSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes headerBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes taglineFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes featuresPopIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes boxSlideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.05);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Side Boxes */
+.side-boxes {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 600px; /* Adjust width as needed */
+}
+
+/* Side Boxes */
+.side-box {
+    background: rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    height: auto; /* Adjust height to fit content */
+    text-align: center;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.8);
+    position: relative;
+    overflow: hidden; /* Hide overflowed content */
+    animation: boxSlideIn 1s ease-out, pulse 2s infinite, bounce 2s infinite;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensure items are spaced evenly */
+    box-sizing: border-box; /* Ensure padding and border are included in width and height */
+}
+
+/* Reviews Box */
+.reviews-box {
+    margin-left: 20px; /* Space between the box and .glass-container */
+}
+
+/* Credits Box */
+.credits-box {
+    margin-right: 20px; /* Space between the box and .glass-container */
+}
+
+/* Review Item */
+.review-item {
+    margin-bottom: 15px;
+    color: #e0e0e0;
+    overflow: hidden; /* Hide overflowed content */
+    display: flex;
+    align-items: flex-start;
+    text-align: left;
+    box-sizing: border-box; /* Ensure padding and border are included in width and height */
+    flex: 1 1 auto; /* Allow flex items to grow and shrink */
+}
+
+.review-item p {
+    margin: 5px 0;
+    overflow-wrap: break-word; /* Allow text to wrap */
+    word-wrap: break-word;
+    box-sizing: border-box; /* Ensure padding and border are included in width and height */
+    font-size: 14px; /* Adjust font size to better fit the box */
+    line-height: 1.4; /* Improve readability */
+}
+
+.review-item strong {
+    color: #00ffff;
+}
+
+.review-item img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+/* Credit Item */
+.credit-item {
+    margin-bottom: 20px;
+    overflow: hidden; /* Hide overflowed content */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box; /* Ensure padding and border are included in width and height */
+    flex: 1 1 auto; /* Allow flex items to grow and shrink */
+}
+
+.credit-item img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.credit-item img:hover {
+    transform: scale(1.1);
+}
+
+.credit-item p {
+    margin: 5px 0;
+    color: #e0e0e0;
+    overflow-wrap: break-word; /* Allow text to wrap */
+    word-wrap: break-word;
+    box-sizing: border-box; /* Ensure padding and border are included in width and height */
+    font-size: 14px; /* Adjust font size to better fit the box */
+    line-height: 1.4; /* Improve readability */
+}

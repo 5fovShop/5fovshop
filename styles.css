@@ -312,3 +312,9 @@ body {
     font-size: 14px; /* Adjust font size to better fit the box */
     line-height: 1.4; /* Improve readability */
 }
+
+img {
+    width: 100px; /* or a percentage */
+    height: auto;
+    object-fit: cover; /* This helps with cropping */
+}

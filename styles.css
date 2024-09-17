@@ -1,7 +1,7 @@
 /* General Styles */
 body {
     font-family: 'Poppins', sans-serif;
-    background: linear-gradient(135deg, #121212, #1e1e1e);
+    background: linear-gradient(135deg, #000000, #333333);
     color: #ffffff;
     margin: 0;
     padding: 0;
@@ -41,7 +41,7 @@ body {
 /* Glassmorphism Container Hover Effect */
 .glass-container:hover {
     transform: translateY(-15px);
-    box-shadow: 0px 15px 40px rgba(0, 255, 255, 0.6);
+    box-shadow: 0px 15px 40px rgba(255, 255, 255, 0.6);
 }
         
 /* Header Section */
@@ -55,12 +55,12 @@ body {
 
 .header .five {
     font-size: 60px;
-    color: #00ffff;
+    color: #ffffff;
 }
 
 .version {
     font-size: 20px;
-    color: #00ffff;
+    color: #ffffff;
 }
 
 .tagline {
@@ -99,16 +99,16 @@ body {
 /* Features Highlight */
 .features li:hover {
     transform: translateY(-5px);
-    background-color: rgba(0, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 /* Purchase Button */
 .purchase-btn {
     position: relative;
-    background: #00ffff;
+    background: #ffffff;
     color: #000000;
     padding: 15px 40px;
-    border: 2px solid #00ffff;
+    border: 2px solid #ffffff;
     border-radius: 30px;
     font-size: 18px;
     font-weight: bold;
@@ -116,13 +116,13 @@ body {
     overflow: hidden;
     text-transform: uppercase;
     transition: transform 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-    box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
 /* Simplified Hover Effect */
 .purchase-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(0, 255, 255, 0.8);
+    box-shadow: 0 0 25px rgba(255, 255, 255, 0.8);
     color: #000000;
 }
 
@@ -268,7 +268,7 @@ body {
 }
 
 .review-item strong {
-    color: #00ffff;
+    color: #ffffff;
 }
 
 .review-item img {
@@ -309,8 +309,6 @@ body {
     overflow-wrap: break-word; /* Allow text to wrap */
     word-wrap: break-word;
     box-sizing: border-box; /* Ensure padding and border are included in width and height */
-    font-size: 14px; /* Adjust font size to better fit the box */
-    line-height: 1.4; /* Improve readability */
 }
 
 img {
